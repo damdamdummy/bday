@@ -1,0 +1,488 @@
+/* --- Keyframes --- */
+
+@keyframes cardUp {
+    0% {
+        transform: translateY(260px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    60% {
+        height: 100px;
+        width: 90px;
+        transform: translateY(0);
+    }
+
+    100% {
+        height: 300px;
+        width: 100%;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardDown {
+    0% {
+        height: 300px;
+        width: 100%;
+        transform: translateY(0);
+    }
+
+    50% {
+        height: 100px;
+        width: 90px;
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(250px);
+    }
+}
+
+@keyframes cardFadeIn {
+
+    0%,
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes card-wiggle {
+    0% {
+        transform: translateY(310px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(310px) rotate(2deg);
+    }
+
+    50% {
+        transform: translateY(310px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(310px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateY(310px) rotate(0deg);
+    }
+}
+
+@keyframes cardDrawIn {
+    to {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes cardSparkle {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+}
+
+@keyframes ribbonDrop {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/* --- Container --- */
+
+.small-card-letter {
+    margin: 150px auto;
+    max-width: 350px;
+    height: 375px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+/* --- Paper Animations --- */
+
+.small-card-letter--open .small-card-paper {
+    animation: cardUp 0.6s forwards;
+}
+
+.small-card-letter--close .small-card-paper {
+    animation: cardDown 0.4s forwards;
+}
+
+.small-card-letter--open .small-card-paper-content {
+    animation: cardFadeIn 1.5s forwards;
+}
+
+/* --- Paper --- */
+
+.small-card-paper {
+    height: 50px;
+    width: 90px;
+    background: #fff0f3;
+    transform: translateY(250px);
+    margin: 0 auto;
+    transition: transform 0.3s 0.1s ease;
+    border-radius: 4px;
+    position: relative;
+}
+
+/* --- SVG deco inside card paper --- */
+
+.small-card-paper .card-deco {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.card-deco .deco-line {
+    opacity: 0;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation-fill-mode: forwards;
+}
+
+.card-deco .deco-dot {
+    opacity: 0;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+}
+
+.small-card-letter--open .card-deco .deco-line {
+    animation: cardDrawIn 1.5s ease-out 0.8s forwards;
+}
+
+.small-card-letter--open .card-deco .deco-dot {
+    animation: cardSparkle 2s ease-in-out infinite alternate forwards;
+    animation-delay: 2.0s;
+}
+
+.small-card-letter--open .card-deco .dot-1 {
+    animation-delay: 2.0s;
+}
+
+.small-card-letter--open .card-deco .dot-2 {
+    animation-delay: 2.1s;
+}
+
+.small-card-letter--open .card-deco .dot-3 {
+    animation-delay: 2.2s;
+}
+
+.small-card-letter--open .card-deco .dot-4 {
+    animation-delay: 2.3s;
+}
+
+.small-card-letter--open .card-deco .dot-5 {
+    animation-delay: 2.4s;
+}
+
+.small-card-letter--open .card-deco .dot-6 {
+    animation-delay: 2.5s;
+}
+
+/* --- Paper Content --- */
+
+.small-card-paper-content {
+    color: #5a3a3a;
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    padding: 22px 20px 16px;
+    opacity: 0;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+
+.small-card-paper-content .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #d13852;
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+}
+
+.small-card-paper-content .card-body {
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: #7a4a50;
+}
+
+/* --- Ribbon decoration --- */
+
+.small-card-ribbon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 30px;
+    background: #d13852;
+    border-radius: 0 0 3px 3px;
+    z-index: 2;
+    transform-origin: top center;
+}
+
+.small-card-letter--open .small-card-ribbon {
+    animation: ribbonDrop 0.4s 0.7s ease-out both;
+}
+
+/* --- Close button --- */
+
+.small-card-paper-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* --- Envelope / Card Base --- */
+
+.small-card-envelope {
+    width: 94px;
+    height: 60px;
+    background: #d13852;
+    position: relative;
+    margin: auto;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease;
+    transform: translateY(310px);
+    animation: card-wiggle 0.3s 0.2s infinite;
+}
+
+.small-card-envelope:hover {
+    animation: none;
+}
+
+.small-card-envelope:hover .small-card-envelope-paper {
+    transform: translateY(-20px);
+}
+
+.small-card-envelope:hover .small-card-envelope-flap {
+    transform: translateY(-45px);
+    transition: all 300ms ease-in-out;
+}
+
+.small-card-envelope:hover .small-card-envelope-detail::after {
+    visibility: hidden;
+}
+
+/* --- Inner envelope paper peek --- */
+
+.small-card-envelope-paper {
+    height: 50px;
+    width: 90px;
+    background: #fff0f3;
+    transform: translateY(0);
+    margin: 0 auto;
+    transition: transform 0.3s 0.1s ease;
+    border-radius: 2px;
+    position: absolute;
+    border: 2px solid transparent;
+}
+
+.small-card-letter--open .small-card-envelope-paper,
+.small-card-letter--close .small-card-envelope-paper {
+    visibility: hidden;
+}
+
+.small-card-letter--open .small-card-envelope-detail::after {
+    visibility: hidden;
+}
+
+/* --- Flap --- */
+
+.small-card-envelope-flap {
+    width: 0;
+    height: 0;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 45px solid #d13852;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    transform: translateY(0);
+    transition: all 300ms ease-in-out;
+}
+
+.small-card-letter--open .small-card-envelope-flap {
+    transform: translateY(-45px);
+}
+
+/* --- Envelope detail fold lines --- */
+
+.small-card-envelope-detail {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    background: #d13852;
+    border-top: 2px solid transparent;
+}
+
+.small-card-letter--open .small-card-envelope-detail {
+    border-top: 2px solid #b52e46;
+}
+
+.small-card-envelope-detail:before {
+    content: '';
+    width: 70px;
+    height: 70px;
+    background: #d13852;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30px;
+    margin: auto;
+    transform: rotate(45deg);
+    border: 4px solid #c02a42;
+}
+
+.small-card-envelope-detail:after {
+    content: '';
+    width: 70px;
+    height: 70px;
+    background: #d13852;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -45px;
+    margin: auto;
+    transform: rotate(45deg);
+    border: 4px solid #c02a42;
+}
+
+.small-card-envelope-fold {
+    height: 25px;
+    width: 86px;
+    background: #d13852;
+    border: 4px solid #c02a42;
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+/* --- Label on envelope --- */
+
+.small-card-envelope-label {
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 8px;
+    font-family: 'Georgia', serif;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.08em;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* --- Responsive --- */
+
+@media screen and (max-width: 658px) {
+    @keyframes cardUp {
+        0% {
+            transform: translateY(250px);
+        }
+
+        50% {
+            transform: translateY(0);
+        }
+
+        60% {
+            height: 100px;
+            width: 90px;
+            transform: translateY(0);
+        }
+
+        100% {
+            height: 280px;
+            width: 100%;
+            transform: translateY(0);
+        }
+    }
+
+    .small-card-paper-content {
+        font-size: 13px;
+        width: 290px;
+    }
+
+    .small-card-envelope-paper {
+        height: 40px;
+    }
+
+    .small-card-paper {
+        height: 36px;
+        width: 65px;
+        transform: translateY(275px);
+    }
+
+    .small-card-envelope {
+        width: 65px;
+        height: 40px;
+    }
+
+    .small-card-envelope-detail::before {
+        width: 55px;
+        height: 56px;
+        top: 30px;
+    }
+
+    .small-card-envelope-detail::after {
+        width: 63px;
+        height: 64px;
+        top: -46px;
+    }
+
+    .small-card-envelope-flap {
+        border-left: 34px solid transparent;
+        border-right: 31px solid transparent;
+        border-bottom: 45px solid #d13852;
+        transform: translateY(-6px);
+        transition: all 300ms ease-in-out;
+    }
+}
