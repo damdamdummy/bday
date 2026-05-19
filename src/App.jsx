@@ -61,7 +61,7 @@ const App = () => {
   );
 
   return (
-    <div className="app-container">
+    <div className="app-shell">
       <audio ref={audioRef} src={backgroundMusic} loop />
       {loading && <OpeningAnimation animateOut={animateOut} />}
 
