@@ -35,7 +35,7 @@ const BookCanvas = ({ active, setActive }) => {
                             Happy Birthday!
                         </h3>
                         <p className="cover-subtitle">
-                            Klik lagi cayangku... 💌
+                            Tap to see the card... 💌
                         </p>
                     </div>
 
@@ -68,10 +68,10 @@ const BookCanvas = ({ active, setActive }) => {
 
 
                         <div className="card2-message-text italic text-justify">
-                            <article style={{ marginBottom: '8px' }}>Selamat bertambah umur, sayangku.</article>
-                            <article style={{ marginBottom: '10px' }}>Semoga setiap langkah yang kamu ambil dimudahkan dan satu per satu hal yang kamu impikan bisa tercapai. Semoga semua hal yang pernah membuat kamu jatuh perlahan berubah jadi sesuatu yang menguatkan dan membuat kamu terus bertumbuh. Semoga di mana pun kamu berada, kamu selalu dijaga, dipertemukan dengan hal-hal baik dan dikelilingi oleh orang-orang yang tulus menyayangi kamu. Semoga hidup selalu memberi kamu alasan untuk tersenyum, bahkan di hari-hari yang berat sekalipun.</article>
-                            <article style={{ marginBottom: '10px' }}>Dengan ataupun tanpa aku nanti, aku tetap berharap kamu hidup dengan bahagia dan dikelilingi cinta yang tulus. <br /> <br />
-                                Barakallah fi umrik ya sayang. Wish you nothing but good things in life.</article>
+                            <article style={{ marginBottom: '8px' }}>Selamat ulang tahun sayangku.</article>
+                            <article style={{ marginBottom: '10px' }}>Doaku, semoga satu per satu mimpimu tercapai, tiap langkahmu dimudahkan dan hal-hal yang pernah membuat kamu terjatuh berubah menjadi kekuatan untuk kamu terus maju. Di mana pun kamu berada semoga kamu selalu dijaga, dipertemukan dengan hal-hal baik dan dikelilingi oleh orang-orang yang tulus. Dan aku harap kamu selalu bahagia, dengan atau tanpa aku.</article>
+                            <article style={{ marginBottom: '10px' }}>
+                                Barakallah fii umrik ya sayang. I wish you nothing but the best.</article>
                         </div>
 
                         <div className="card2-decoration"></div>
