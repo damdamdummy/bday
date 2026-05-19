@@ -87,8 +87,8 @@ const SmallLetter = () => {
                             x
                         </div>
                         <p className="text-justify text-sm"><b>21 May 2026</b><br />
-                            Today is your day... ♡ <br />
-                            Aku cuma bisa nyiapin surprise kecil kecilan kayak gini, semoga kamu suka yang.</p>
+                            Today is your day... <br />
+                            Maaf ya aku cuma bisa nyiapin ini buat hari spesial kamu, hope you like it ♡ </p>
 
                         <div className="flex items-center justify-center gap-1">
 

@@ -65,13 +65,11 @@ const BookCanvas = ({ active, setActive }) => {
                         <h3 className="card2-recipient">
                             To. Pia
                         </h3>
-
-
                         <div className="card2-message-text italic text-justify">
                             <article style={{ marginBottom: '8px' }}>Selamat ulang tahun sayangku.</article>
-                            <article style={{ marginBottom: '10px' }}>Doaku, semoga satu per satu mimpimu tercapai, tiap langkahmu dimudahkan dan hal-hal yang pernah membuat kamu terjatuh berubah menjadi kekuatan untuk kamu terus maju. Di mana pun kamu berada semoga kamu selalu dijaga, dipertemukan dengan hal-hal baik dan dikelilingi oleh orang-orang yang tulus. Dan aku harap kamu selalu bahagia, dengan atau tanpa aku.</article>
+                            <article style={{ marginBottom: '10px' }}>Doaku, semoga satu per satu mimpimu tercapai, tiap langkahmu dimudahkan dan hal-hal yang pernah membuat kamu terjatuh berubah menjadi kekuatan untuk kamu terus maju. Di mana pun kamu berada semoga kamu selalu dijaga, dipertemukan dengan hal-hal baik dan dikelilingi oleh orang-orang yang tulus. Bahagia selalu ya sayang, dengan atau tanpa aku.</article>
                             <article style={{ marginBottom: '10px' }}>
-                                Barakallah fii umrik ya sayang. I wish you nothing but the best.</article>
+                                Barakallah fii umrik. I wish you nothing but the best.</article>
                         </div>
 
                         <div className="card2-decoration"></div>
