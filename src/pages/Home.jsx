@@ -45,7 +45,7 @@ const Home = () => {
                                 <span style={{ "--t": "6.4s" }}>y</span>
                             </h1>
                             <div className="hat">
-                                <img src={hat} alt="" width="130" />
+                                <img src={hat} alt="" width="100" />
                             </div>
                         </div>
 
@@ -62,10 +62,10 @@ const Home = () => {
                                 <i className="fa-solid fa-heart"></i>
                             </div>
                             <div className="balloon_one">
-                                <img width="100px" src={ballon1} alt="" />
+                                <img width="200px" src={ballon1} alt="" />
                             </div>
                             <div className="balloon_two">
-                                <img width="100px" src={ballon2} alt="" />
+                                <img width="150px" src={ballon2} alt="" />
                             </div>
                         </div>
 
@@ -105,11 +105,11 @@ const Home = () => {
                 </div>
 
                 <div className="decorate_bottom2">
-                    <img src={meong} alt="" width="120" />
+                    <img src={meong} alt="" width="100" />
                 </div>
 
                 <div className="smiley__icon">
-                    <img src={smileIcon} alt="" width="25" />
+                    <img src={smileIcon} alt="" width="50" />
                 </div>
 
                 <section className="smallLetter absolute md:-bottom-26 -bottom-20 md:left-[45%] left-[50%] -translate-x-1/2" style={{ "--t": "15.6s" }}>

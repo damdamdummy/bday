@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 * {
     padding: 0;
@@ -12,10 +14,13 @@
     --color-pink: #feecea;
     --color-white: #fff;
     --color-black: #333;
-    --color-text-pink: #FF7882;
+    /* --color-text-pink: #FF7882; */
+    --color-text-pink: #F4A8B8;
     --color-heart: #FF7882;
+    --color-text-blue: #bcc0fa;
     --color-bg-letter: #fff8e4;
     --color-border: #DACCBF;
+    --color-yellow: #ffdcbb;
 }
 
 body {
@@ -215,7 +220,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    font-family: "Titan One", sans-serif;
+    /* font-family: "Titan One", sans-serif; */
+    font-family: "Satisfy", cursive;
     font-size: 6rem;
     flex-direction: column;
     line-height: 120%;
@@ -225,11 +231,11 @@ body {
 .title .happy,
 .title .birthday {
     position: relative;
-    text-shadow: 4px 4px var(--color-black),
-        -4px 4px var(--color-black),
-        4px -4px var(--color-black),
-        -4px -4px var(--color-black),
-        4px 8px 0 var(--color-black);
+    text-shadow: 2px 2px var(--color-black),
+        -2px 2px var(--color-black),
+        2px -2px var(--color-black),
+        -2px -2px var(--color-black),
+        2px 4px 0 var(--color-black);
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -261,8 +267,8 @@ body {
 
 .title .hat {
     position: absolute;
-    right: 45px;
-    top: -350px;
+    right: 90px;
+    top: -50px;
     transform: rotate(-40deg);
     z-index: -1;
     animation: topHat 4s 7s forwards ease;
@@ -280,7 +286,7 @@ body {
     35%,
     100% {
         top: -30px;
-        transform: rotate(0deg);
+        transform: rotate(15deg);
     }
 }
 
@@ -292,7 +298,8 @@ body {
     background-color: var(--color-text-pink);
     border-radius: 50px;
     margin-top: 20px;
-    font-family: "Sriracha", cursive;
+    /* font-family: "Sriracha", cursive; */
+    font-family: "Satisfy", cursive;
 
 }
 
@@ -341,12 +348,12 @@ body {
     padding: 0px 20px;
     bottom: -20px;
     border: 3px solid var(--color-black);
-    font-family: 'Dancing Script', cursive;
+    font-family: "Satisfy", cursive;
 }
 
 .date__of__birth span,
 .name span {
-    font-weight: bold;
+    font-weight: normal;
     margin: 0px 40px;
 }
 
@@ -468,7 +475,7 @@ body {
 .right .balloon_one {
     position: absolute;
     top: -70px;
-    left: -70px;
+    left: -95px;
     animation: balloon1 2s infinite linear;
 }
 
@@ -524,7 +531,7 @@ body {
 .decorate_star {
     position: absolute;
     transform: scale(0);
-    background-color: var(--color-black);
+    background-color: var(--color-yellow);
     clip-path: polygon(0 50%, 35% 35%, 50% 0, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%);
     animation: scaleCricle 3s var(--t) forwards,
         scaleStar 2s 16s infinite ease-in-out;
@@ -578,7 +585,8 @@ body {
 .decorate_bottom {
     position: absolute;
     right: 0;
-    bottom: -10px;
+    bottom: -24px;
+    transform: rotate(-40deg);
 }
 
 .decorate_bottom2 {
@@ -851,7 +859,8 @@ body {
         width: 100%;
         display: flex;
         justify-content: center;
-        font-family: "Titan One", sans-serif;
+        /* font-family: "Titan One", sans-serif; */
+        font-family: "Satisfy", cursive;
         font-size: 3rem;
         letter-spacing: 8px;
         flex-direction: column;
@@ -871,8 +880,8 @@ body {
 
     .title .hat {
         position: absolute;
-        right: -98px;
-        top: -51px !important;
+        right: -50px;
+        top: -60px !important;
         transform: rotate(-40deg);
         z-index: -1;
         animation: topHat 4s 7s forwards ease;
